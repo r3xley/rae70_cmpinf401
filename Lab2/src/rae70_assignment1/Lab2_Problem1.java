@@ -2,7 +2,7 @@ package rae70_assignment1;
 
 import javax.swing.JOptionPane;
 
-public class Pythagorean_Theorem {
+public class Lab2_Problem1 {
 
 	public static void main(String[] args) {
 		String a = JOptionPane.showInputDialog("Enter side a: ");
