@@ -8,9 +8,10 @@ public class Lab2_Problem2 {
 		double convert = Double.parseDouble(r);
 			
 			double perimeter = (2 * Math.PI * convert);//calculate the perimeter and the area 
-			double area = (Math.PI * Math.pow(convert,2));
+			double area = (Math.PI * Math.pow(convert,2));//calculate the area
 			
 			
+			//14-21 rounding the value 
 			area = area * 100;
 			perimeter = perimeter * 100;
 			double roundp = (double)Math.round(perimeter);
@@ -20,7 +21,7 @@ public class Lab2_Problem2 {
 			area = rounda / 100.0;
 			
 		
-		JOptionPane.showMessageDialog( null , "The circle with the radius " + convert + " has the area of " + area + " and a perimeter of " + perimeter);
+		JOptionPane.showMessageDialog( null , "The circle with the radius " + convert + " has the area of " + area + " and a perimeter of " + perimeter);//show the output
 
 	}
 
