@@ -26,11 +26,11 @@ public class UnitConverter {
 			if(units.equals("oz")) {
 				double convertgm = numerical * 28.35;
 				result = convertgm;
-				units = "oz";
+				units = "gm";
 			}else {
 				double convertoz = numerical / 28.35;
 				result = convertoz;
-				units = "gm";
+				units = "oz";
 			}
 		}
 		else if(units.equals("m") || units.equals("yd")) {

@@ -10,15 +10,24 @@ public class Palindrome {
 	phrase = phrase.toLowerCase();
 	System.out.print(phrase);
 
-		//convert to lowercase
+	String cleanPhrase = clearuserInput(Phrase)	
+	
+	
+	//convert to lowercase
 		//1 iterate all letters
 		//2 if letter lowercase keep it 
 	char letter = 'x';
 	int lowbound = (int)'a';
 	int upperbound = (int)'z';
-	int ascii = (int)
+	int ascii = (int) letter;
 			
-	
+	for(int i = 0; i<phrase.length();i++);
+		char letter = phrase.charAt(i);
+		int ascii = (int) letter;
+		
+		if(ascii >= lowerbound && ascii <= upperbound) {
+			cleanPhrase = cleanPhrase
+		}
 	if(int) letter >= (int)'a')
 	System.out.print((int)'x');
 		//Remove all non letter
@@ -26,4 +35,10 @@ public class Palindrome {
 		//compare two strings
 	}
 
+	
+	public static String cleanUserInput(String Phrase) {
+		
+	}
 }
+
+
