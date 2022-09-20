@@ -1,4 +1,4 @@
-package rae70_assignment2;
+package rae70_lab3;
 import javax.swing.JOptionPane;
 public class UnitConverter {
 
