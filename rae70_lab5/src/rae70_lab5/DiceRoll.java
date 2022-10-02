@@ -78,8 +78,7 @@ public class DiceRoll {
 					twelve++;
 				}
 			i++;
-			//System.out.print(two);
-		}
+					}
 		System.out.println("You rolled 2 " + two + " out of " + input+ " times!");
 		System.out.println("You rolled 3 " + third + " out of " + input+ " times!");
 		System.out.println("You rolled 4 " + four + " out of " + input+ " times!");
@@ -92,7 +91,7 @@ public class DiceRoll {
 		System.out.println("You rolled 11 " + eleven + " out of " + input+ " times!");
 		System.out.println("You rolled 12 " + twelve + " out of " + input+ " times!");
 		
-		//System.out.print(two+third+four+five+six+seven+eight+nine+ten+eleven+twelve);
+		
 	}
 
 }
