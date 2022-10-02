@@ -3,17 +3,10 @@ import javax.swing.JOptionPane;
 public class OddOrEven {
 
 	public static void main(String[] args) {
-		String userInput = JOptionPane.showInputDialog("Plaese enter a number");
-		int userInput = Integer.parseInt(userInput);
+		java.lang.String var = "Cowabunga";
+		java.lang.String segment = var.substring(0,2) + var.substring(7,9);
+		System.out.println(segment);
 		
-		if(userInput % 2 == 0 );
-		{	
-			System.out.print ("Even");
-		}
-		else
-		{
-			System.out.print("Odd");
-		}
 		}
 
 }
