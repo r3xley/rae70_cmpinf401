@@ -1,10 +1,11 @@
 package rae70_lab6;
 
 public class MyRectangle
-{	int width;
-int height;
-int startX;
-int startY;
+{	
+private int width;
+private int height;
+private int startX;
+private int startY;
 // Declare instance variables here.  See toString() method below for names.
 
 public MyRectangle()
