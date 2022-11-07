@@ -1,17 +1,19 @@
-import javax.swing.JOptionPane;
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
 
 public class LuckyNumber {
-
-	public static void main(String[] args) {
-		int result = 5;
-		for (int i = result; i > 0; i--){
-		result = i + i;
-		System.out.print(i);
-		}
-		
-		
-		
-	
-	}
-
-}
+	public static ArrayList<Entree> readEntrees(String fileName) {
+		ArrayList<Entree> entrees = new ArrayList<>();
+		try {
+			FileReader fr = new FileReader(fileName); 
+			BufferedReader br = new BufferedReader(fr); 
+			String food;
+			while((food = br.readLine())!= null) {
+				String[] EntreeList = food.split("@@");
+				Entree entree1 = new Entree(EntreeList[0],EntreeList[1],Integer.parseInt(EntreeList[2]));
+				entrees.add(entree1);
+			}
+		}}

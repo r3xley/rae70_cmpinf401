@@ -1,4 +1,9 @@
 package rae70_MenuManager;
+/**
+ * Class MenuRandomize
+ * @author : Robert Exley
+ * @created: 11/1/2022
+ */
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -8,6 +13,7 @@ public class MenuRandomize {
 	private ArrayList<Side> sides;
 	private ArrayList <Salad>salads;
 	private ArrayList <Dessert>desserts;
+
 	public MenuRandomize(String entreeFile, String sideFile, String saladFile, String dessertFile){
 
 		entrees = FileManager.readEntrees(entreeFile);
@@ -17,20 +23,28 @@ public class MenuRandomize {
 	}
 	public Menu randomMenu() {
 
-		Random rand = new Random();
+		Random randomizeDish = new Random();
 
-		int randEntree = rand.nextInt(entrees.size());
+		int randEntree = randomizeDish.nextInt(entrees.size());
+		int randSide = randomizeDish.nextInt(sides.size());
+		int randSalad = randomizeDish.nextInt(salads.size());
+		int randDessert = randomizeDish.nextInt(desserts.size());
+
+
+
 		Entree randomEntree = entrees.get(randEntree);
-
-		int randSide = rand.nextInt(sides.size());
 		Side randomSide = sides.get(randSide);
-
-		int randSalad = rand.nextInt(salads.size());
 		Salad randomSalad = salads.get(randSalad);
-
-		int randDessert = rand.nextInt(desserts.size());
 		Dessert randomDessert = desserts.get(randDessert);
 
+
 		return new Menu("Today's Menu!", randomEntree, randomSide, randomSalad, randomDessert);
+		/**
+		 * Method randomMenu
+		 * @param N/A
+		 * @return new Menu with random dishes
+		 */
+
 	}
+
 }

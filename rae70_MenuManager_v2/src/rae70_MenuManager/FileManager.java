@@ -1,8 +1,12 @@
 package rae70_MenuManager;
+/**
+ * Class FileManager
+ * @author : Robert Exley 
+ * @created: 11/1/2022
+ */
+
 import java.io.BufferedReader;
-
 import java.io.FileReader;
-
 import java.util.ArrayList;
 
 public class FileManager {
@@ -24,6 +28,12 @@ public class FileManager {
 			System.out.println("error");
 		}
 		return entrees;
+		/**
+		* Method readEntrees
+		* @param filename 
+		* @return array list with "@@" split = entrees
+		*/
+
 
 	}
 	public static ArrayList<Side> readSides(String fileName) {
@@ -44,6 +54,12 @@ public class FileManager {
 			System.out.println("error");
 		}
 		return sides;
+		/**
+		* Method readSides
+		* @param filename 
+		* @return array list with "@@" split = sides
+		*/
+
 
 	}
 	public static ArrayList<Salad> readSalads(String fileName) {
@@ -65,6 +81,11 @@ public class FileManager {
 			System.out.println("error");
 		}
 		return salads;
+		/**
+		* Method readSalads
+		* @param filename 
+		* @return array list with "@@" split = salads
+		*/
 
 	}
 	public static ArrayList<Dessert> readDesserts(String fileName) {
@@ -86,6 +107,11 @@ public class FileManager {
 			System.out.println("error");
 		}
 		return desserts;
+		/**
+		* Method readDesserts
+		* @param filename 
+		* @return array list with "@@" split = dessert
+		*/
 
 	}
 

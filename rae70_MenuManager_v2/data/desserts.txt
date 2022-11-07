@@ -1,2 +1,5 @@
 Ice Cream@@One scoop of freshly made ice cream@@300
 Cake@@slice of cake served with whipped cream@@440
+Churro@@Deep fried and served with sugar@@560
+Flan@@Crispy top with soft inner@@390
+Fruit Cup@@Option for lactose intolerant@@100
