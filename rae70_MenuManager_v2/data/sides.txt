@@ -1,5 +1,5 @@
-Bread@@Served with butter and lightly toasted@@200
-Spinich@@Sauteed and served on the side@@240
+Bread@@Bread which is served with butter and lightly toasted@@200
+Spinich@@ Spinich which is sauteed and served on the side@@240
 Coleslaw@@A bowl of coleslaw served on the side of your meal@@390
 Mac and Cheese@@Creamy mac and cheese@@560
 Green Beans@@Steamed green beans served on the side@@270

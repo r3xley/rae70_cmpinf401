@@ -1,5 +1,8 @@
 package rae70_lab8;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+
 public class RecordList {
 	/**
 	 * The node class represents a single list element with a data item and
@@ -20,6 +23,10 @@ public class RecordList {
 			next = null;
 			data = dataValue;
 		}
+
+		
+			
+		
 		
 	}
 	
@@ -59,12 +66,23 @@ public class RecordList {
 	 * @return the index the data was inserted at
 	 */
 	public int add(Record data) {
+		if(head == null) {
+			head = new Node(data);
+		}
+		
+		Node temp = new Node(data);
 		Node currentNode = head;
 		int index = 0;
 		
-		while(currentNode.next != null && !currentNode.next.data.getName().equals(name));
+		while(currentNode.next != null && currentNode.next.data.getTime() < data.getTime()) {
+		currentNode = currentNode.next;
+		index++;
+		}
+		temp.next = currentNode.next;
+		currentNode.next = temp;
+		
 		// Replace this with your own code. You can use the indexOf() method as a guide.
-		return 0;
+		return index;
 		
 		// traverse to place to insert node (i.e. get currentNode to be the one
 		// immediately before where we want to insert -- the last node with a strictly
@@ -94,6 +112,25 @@ public class RecordList {
 	 * @param filename name of the file to write the list to
 	 */
 	public void writeToFile(String filename) {
+		try {
+		    System.out.println(System.getProperty("user.dir"));
+			FileWriter fw = new FileWriter(filename);
+		    BufferedWriter bw = new BufferedWriter(fw);
+		    Node currentNode = head.next;
+			while (currentNode != null) {
+				bw.write(currentNode.data.getName() + ", " + currentNode.data.getTime() + "\n");
+				currentNode = currentNode.next;
+			}
+		    
+		    bw.close();
+		    fw.close();
+		} catch (Exception e) {
+		            e.printStackTrace();
+		}
+
+		
+		
+		
 		// Add your own code here to write out the list contents to a file. You can use
 		// our file writing examples and the print() method above as a guide.
 	}

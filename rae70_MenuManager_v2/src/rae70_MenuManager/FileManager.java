@@ -25,14 +25,14 @@ public class FileManager {
 			br.close();
 			fr.close();
 		} catch (Exception e) {
-			System.out.println("error");
+			e.printStackTrace();
 		}
 		return entrees;
 		/**
-		* Method readEntrees
-		* @param filename 
-		* @return array list with "@@" split = entrees
-		*/
+		 * Method readEntrees
+		 * @param filename 
+		 * @return array list with "@@" split = entrees
+		 */
 
 
 	}
@@ -51,14 +51,14 @@ public class FileManager {
 			br.close();
 			fr.close();
 		} catch (Exception e) {
-			System.out.println("error");
+			e.printStackTrace();
 		}
 		return sides;
 		/**
-		* Method readSides
-		* @param filename 
-		* @return array list with "@@" split = sides
-		*/
+		 * Method readSides
+		 * @param filename 
+		 * @return array list with "@@" split = sides
+		 */
 
 
 	}
@@ -78,14 +78,14 @@ public class FileManager {
 			br.close();
 			fr.close();
 		} catch (Exception e) {
-			System.out.println("error");
+			e.printStackTrace();
 		}
 		return salads;
 		/**
-		* Method readSalads
-		* @param filename 
-		* @return array list with "@@" split = salads
-		*/
+		 * Method readSalads
+		 * @param filename 
+		 * @return array list with "@@" split = salads
+		 */
 
 	}
 	public static ArrayList<Dessert> readDesserts(String fileName) {
@@ -104,14 +104,14 @@ public class FileManager {
 			br.close();
 			fr.close();
 		} catch (Exception e) {
-			System.out.println("error");
+			e.printStackTrace();
 		}
 		return desserts;
 		/**
-		* Method readDesserts
-		* @param filename 
-		* @return array list with "@@" split = dessert
-		*/
+		 * Method readDesserts
+		 * @param filename 
+		 * @return array list with "@@" split = dessert
+		 */
 
 	}
 
