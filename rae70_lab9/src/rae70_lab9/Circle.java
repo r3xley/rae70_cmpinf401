@@ -1,7 +1,8 @@
 package rae70_lab9;
 
 public class Circle {
-    private double radius;
+
+	private double radius;
 	private String color;
 	
 	public Circle() {
