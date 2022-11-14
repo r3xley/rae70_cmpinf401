@@ -6,9 +6,25 @@ public class Staff extends Person {
     private double pay;
 
 public Staff(String name, String address, double pay){
+    super(name, address);
+    this.pay = pay;
 
 }
+public String getSchool(){
+    return school;
+}
+public void setSchool(String school){
+    this.school = school;
+}
+public double getPay(double pay){
+    return pay;
 
-    
+}
+public void setPay(double pay){
+    this.pay = pay;
+}
+public String toString(){
+    return "Staff" + super.toString();
+}
     
 }
