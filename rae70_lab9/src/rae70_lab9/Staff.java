@@ -16,7 +16,7 @@ public String getSchool(){
 public void setSchool(String school){
     this.school = school;
 }
-public double getPay(double pay){
+public double getPay(){
     return pay;
 
 }
