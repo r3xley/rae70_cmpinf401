@@ -1,27 +1,38 @@
 package rae70_MenuManager;
-/**
- * Class MenuRandomize
- * @author : Robert Exley
- * @created: 11/1/2022
- */
 
 import java.util.ArrayList;
 import java.util.Random;
 
-public class MenuRandomize {
-	private ArrayList<Entree> entrees;
-	private ArrayList<Side> sides;
-	private ArrayList <Salad>salads;
-	private ArrayList <Dessert>desserts;
+public class MenuManager {
+	private ArrayList<Entree> entrees = new ArrayList<>();
+	private ArrayList<Side> sides= new ArrayList<>();
+	private ArrayList <Salad>salads= new ArrayList<>();
+	private ArrayList <Dessert>desserts= new ArrayList<>();
 
-	public MenuRandomize(String entreeFile, String sideFile, String saladFile, String dessertFile){
+	public MenuManager(String dishesFile) {
 
-		entrees = FileManager.readEntrees(entreeFile);
-		sides = FileManager.readSides(sideFile);
-		salads = FileManager.readSalads(saladFile);
-		desserts = FileManager.readDesserts(dessertFile);
+		ArrayList<MenuItem> menuItems = FileManager.readItems(dishesFile);
+
+		for(MenuItem mi : menuItems) {
+			if(mi instanceof Entree) {
+				entrees.add((Entree) mi);
+			}
+			else if(mi instanceof Side) {
+				sides.add((Side)mi);
+			}
+			else if(mi instanceof Salad) {
+				salads.add((Salad)mi);
+			}
+			else {
+				desserts.add((Dessert)mi);
+			}
+
+		}
+
 	}
-	public Menu randomMenu() {
+
+
+	public Menu randomMenu(String name) {
 
 		Random randomizeDish = new Random();
 

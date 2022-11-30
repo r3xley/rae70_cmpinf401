@@ -4,8 +4,14 @@ package rae70_MenuManager;
  * author: Robert Exley
  * created: 10/9/22 
  */
-public class Salad {
-	String name;
+public class Salad extends MenuItem {
+
+
+
+	public Salad(String name, String description, int calories,double price) {
+		super(name, description, calories, price);
+	}
+	/*String name;
 	String description;
 	int calories;
 
@@ -15,9 +21,9 @@ public class Salad {
 		this.calories = calories;
 
 		/*
-		 * declare and assign for salad
-		 */
-	}
+	 * declare and assign for salad
+	 */
+	/*}
 
 	public int getCal() {
 		return calories;
@@ -40,7 +46,7 @@ public class Salad {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
+	}*/
 	/*
 	 * ^ getters and setters for name, description, cal. (Salad)
 	 */

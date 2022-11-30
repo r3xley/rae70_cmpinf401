@@ -46,22 +46,22 @@ public class Menu {
 		if(entree == null) {
 			totalcal += 0;
 		}else {
-			totalcal += entree.getCal();
+			totalcal += entree.getCalories();
 		}
 		if(side == null) {
 			totalcal += 0;
 		}else {
-			totalcal += side.getCal();
+			totalcal += side.getCalories();
 		}
 		if(salad == null) {
 			totalcal += 0;
 		}else {
-			totalcal += salad.getCal();
+			totalcal += salad.getCalories();
 		}
 		if(dessert == null) {
 			totalcal += 0;
 		}else {
-			totalcal += dessert.getCal();
+			totalcal += dessert.getCalories();
 		}
 
 
@@ -109,6 +109,9 @@ public class Menu {
 		 */
 	}
 
+	public String toString() {
+		return name;
 
+	}
 }
 

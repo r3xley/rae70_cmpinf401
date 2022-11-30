@@ -8,12 +8,12 @@ public class MenuTest {
 
 	public static void main(String[] args) {
 
-		Entree steak = new Entree("Sirloin Steak","A delicious piece of delicate meat",500);
-		Entree lobster = new Entree("Lobster","High quality lobster",600);
-		Side spinich = new Side("Spinich","Sauteed Spinich",150);
-		Salad salad1 = new Salad("Special Salad1","Tasty and fresh",90);
-		Salad salad2 = new Salad("Special Salad2","Today's Special",120);
-		Dessert cake = new Dessert("Cake","Fluffy freshly baked",300);
+		Entree steak = new Entree("Sirloin Steak","A delicious piece of delicate meat",500,16.00);
+		Entree lobster = new Entree("Lobster","High quality lobster",600,16.00);
+		Side spinich = new Side("Spinich","Sauteed Spinich",150,4.00);
+		Salad salad1 = new Salad("Special Salad1","Tasty and fresh",100, 3.90);
+		Salad salad2 = new Salad("Special Salad2","Today's Special",100,12.00);
+		Dessert cake = new Dessert("Cake","Fluffy freshly baked",300, 7.90);
 
 		/*
 		 * ^ create test entree,side,salad,and a dessert

@@ -4,21 +4,19 @@ package rae70_MenuManager;
  * author: Robert Exley
  * created: 10/9/22 
  */
-public class Side {
-	String name;
-	String description;
-	int calories;
+public class Side extends MenuItem  {
 
-	public Side(String name, String description, int calories) {
-		this.name = name; 
-		this.description = description;
-		this.calories = calories;
-		/*
-		 * declare and assign for the side class
-		 */
 
+
+	public Side(String name, String description, int calories,double price) {
+		super(name, description, calories, price);
 	}
-	public int getCal() {
+	/*
+	 * declare and assign for the side class
+	 */
+
+}
+/*public int getCal() {
 		return calories;
 	}
 	public void setCal(int calories) {
@@ -41,6 +39,6 @@ public class Side {
 	}
 
 	/*
-	 * ^ getters and setters for name, description, cal. (Side)
-	 */
-}
+ * ^ getters and setters for name, description, cal. (Side)
+ */
+// }
