@@ -1,5 +1,12 @@
 package rae70_MenuManager;
 
+/*
+ * Class: Menu
+ * author: Robert Exley
+ * created: 11/27/22 
+ */
+
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -15,7 +22,7 @@ public class MenuManager {
 
 		for(MenuItem mi : menuItems) {
 			if(mi instanceof Entree) {
-				entrees.add((Entree) mi);
+				entrees.add((Entree)mi);
 			}
 			else if(mi instanceof Side) {
 				sides.add((Side)mi);
@@ -30,7 +37,11 @@ public class MenuManager {
 		}
 
 	}
-
+	/**
+	 * Method MenuManager - puts dishes in right arraylist
+	 * @param String dishFile
+	 * @return N/A
+	 */
 
 	public Menu randomMenu(String name) {
 
@@ -49,7 +60,7 @@ public class MenuManager {
 		Dessert randomDessert = desserts.get(randDessert);
 
 
-		return new Menu("Today's Menu!", randomEntree, randomSide, randomSalad, randomDessert);
+		return new Menu(name, randomEntree, randomSide, randomSalad, randomDessert);
 		/**
 		 * Method randomMenu
 		 * @param N/A
@@ -57,5 +68,40 @@ public class MenuManager {
 		 */
 
 	}
+
+	/*public Menu minCalories(String name) {
+		int min_entree = 0;
+		int min_side = 0;
+		int min_salad = 0;
+		int min_dessert = 0;
+		for(Entree e : entrees) {
+			if(e.getCalories() < min_entree) {
+				min_entree = e.getCalories();
+			}
+
+		}
+		for(Side s : sides) {
+			if(s.getCalories() < min_side) {
+				min_side = s.getCalories();
+			}
+		}
+		for(Salad sa : salads) {
+			if(sa.getCalories() < min_salad) {
+				min_salad = sa.getCalories();
+			}
+
+		}
+		for(Dessert d : desserts) {
+			if(d.getCalories() < min_dessert) {
+				min_dessert = d.getCalories();
+			}
+		}
+		String all = ""
+
+				return new Menu(name, min_entree,min_side,min_salad,min_dessert);
+
+
+	}*/
+
 
 }

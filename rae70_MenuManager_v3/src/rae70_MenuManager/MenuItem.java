@@ -1,5 +1,9 @@
 package rae70_MenuManager;
-
+/*
+ * Class: MenuManager
+ * author: Robert Exley
+ * created: 11/27/22 
+ */
 public class MenuItem {
 	private String name;
 	private String description;
@@ -11,6 +15,13 @@ public class MenuItem {
 		this.description = description;
 		this.calories = calories;
 		this.price = price;
+		/**
+		 * Method MenuItem
+		 * @param String name, String description,int calories,double price
+		 * @return N/A
+		 */
+
+
 	}
 
 	public String getName() {
@@ -26,9 +37,9 @@ public class MenuItem {
 		return this.price;
 	}
 	public String toString(){
-	    return name;
+		return name;
 
 
 	}
-
+	//getter and setters
 }

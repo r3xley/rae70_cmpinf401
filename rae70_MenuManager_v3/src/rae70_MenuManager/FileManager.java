@@ -28,7 +28,7 @@ public class FileManager {
 				double price = Double.parseDouble(itemList[4]);
 				MenuItem item = new MenuItem(name, descr, cal, price);
 				items.add(item);
-				
+
 			}
 
 			br.close();
@@ -50,13 +50,13 @@ public class FileManager {
 			System.out.println(System.getProperty("user.dir"));
 			FileWriter fw = new FileWriter(filename);
 			BufferedWriter bw = new BufferedWriter(fw);
-		
+
 			for(Menu m : menus){
 				String output = "";
 				// Create an output string by concattenating data from each menu
 				output = m.entree.getName();
 				bw.write(output);
-				
+
 			}
 
 			bw.close();
