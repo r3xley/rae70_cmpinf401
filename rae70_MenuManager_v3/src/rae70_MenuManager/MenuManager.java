@@ -68,6 +68,24 @@ public class MenuManager {
 		 */
 
 	}
+	public ArrayList<Entree> getEntrees() {
+		return entrees;
+	}
+	
+	
+	public ArrayList<Side> getSides() {
+		return sides;
+	}
+	
+	public ArrayList<Salad> getSalads() {
+		return salads;
+	}
+	
+	public ArrayList<Dessert> getDesserts() {
+		return desserts;
+	}
+	
+	
 
 	/*public Menu minCalories(String name) {
 		int min_entree = 0;

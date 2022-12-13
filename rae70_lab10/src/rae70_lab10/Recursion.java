@@ -19,6 +19,7 @@ public class Recursion {
 		}
 	}
 //task 2
+	
 // task 3 cover in class	
 
 	public static void main(String[] args) {
@@ -26,6 +27,7 @@ public class Recursion {
 		printArrayElements(a,2);
 		
 		System.out.print(sumOfDigits(12345));
+		
 
 
 	}

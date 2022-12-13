@@ -65,7 +65,7 @@ public class Menu {
 		}
 
 
-		return "Total Calories: " + totalcal;
+		return totalcal + "cal";
 		/*
 		 * check each category for a null value --> turn it to 0, if not GET the calories and add to total
 		 */
@@ -108,6 +108,31 @@ public class Menu {
 		 * Also check if the value is null, otherwise add description to string 
 		 */
 	}
+	public String totalPrice() {
+		int totalpri = 0;
+		if(entree == null) {
+			totalpri += 0;
+		}else {
+			totalpri += entree.getPrice();
+		}
+		if(side == null) {
+			totalpri += 0;
+		}else {
+			totalpri += side.getPrice();
+		}
+		if(salad == null) {
+			totalpri += 0;
+		}else {
+			totalpri += salad.getPrice();
+		}
+		if(dessert == null) {
+			totalpri += 0;
+		}else {
+			totalpri += dessert.getPrice();
+		}
+		return totalpri + "$";
+	}
+		
 
 	public String toString() {
 		return name;

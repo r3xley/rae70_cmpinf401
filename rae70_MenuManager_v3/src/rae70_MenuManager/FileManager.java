@@ -23,11 +23,28 @@ public class FileManager {
 			while((food = br.readLine())!= null) {
 				String[] itemList = food.split("@@");
 				String name = itemList[0];
+				String type = itemList[1];
 				String descr = itemList[2];
 				int cal = Integer.parseInt(itemList[3]);
 				double price = Double.parseDouble(itemList[4]);
-				MenuItem item = new MenuItem(name, descr, cal, price);
-				items.add(item);
+				
+				if(type.equalsIgnoreCase("entree")) {
+					Entree item = new Entree(name, descr, cal, price);
+					items.add(item);
+				}
+				else if(type.equalsIgnoreCase("dessert")) {
+					Dessert item = new Dessert(name, descr, cal, price);
+					items.add(item);
+				}
+				else if(type.equalsIgnoreCase("side")) {
+					Side item = new Side(name, descr, cal, price);
+					items.add(item);
+				}
+				else if(type.equalsIgnoreCase("salad")) {
+					Salad item = new Salad(name, descr, cal, price);
+					items.add(item);
+				}
+				
 
 			}
 
@@ -53,9 +70,19 @@ public class FileManager {
 
 			for(Menu m : menus){
 				String output = "";
+				String output2 = "";
+				String output3 = "";
+				String output4 = "";
 				// Create an output string by concattenating data from each menu
-				output = m.entree.getName();
+				output = m.entree + " "+ m.entree.getDescription() +" "+ m.entree.getCalories()+"\n";
+				output2 = m.side + " "+ m.side.getDescription() +" "+ m.side.getCalories()+"\n";
+				output3 = m.salad + " "+ m.salad.getDescription() +" "+ m.salad.getCalories()+"\n";
+				output4 = m.dessert + " "+ m.dessert.getDescription() +" "+ m.dessert.getCalories()+"\n";
+				 
 				bw.write(output);
+				bw.write(output2);
+				bw.write(output3);
+				bw.write(output4);
 
 			}
 
