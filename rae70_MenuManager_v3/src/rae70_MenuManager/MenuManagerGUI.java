@@ -48,13 +48,13 @@ public class MenuManagerGUI {
 
 
 	private MenuManager men1;
-	
+
 
 	public MenuManagerGUI(){
 		men1 = new MenuManager("data/dishes.txt");
 
 		buildMainWindow();
-		// buildSecWindow();
+		//call the method to build first window
 
 	}
 	private void buildMainWindow(){
@@ -66,7 +66,7 @@ public class MenuManagerGUI {
 		mainWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		mainWindow.getContentPane().setLayout(null);
 
-
+		//labels- entree,side,salad,dessert
 		label = new JLabel("Entree");
 		label.setBounds(20, 20, 150, 30);
 		mainWindow.getContentPane().add(label);
@@ -158,13 +158,14 @@ public class MenuManagerGUI {
 		mainWindow.getContentPane().add(button6);
 		button6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-		
-			FileManager.writeToFile("data/menu.txt",menus );
 
-				
+				FileManager.writeToFile("data/menu.txt",menus );
+
+
 
 			}
 		});
+		//generate a random menu
 		button7 = new JButton("Random Menu");
 		button7.setBounds(50, 300, 200, 30);
 		mainWindow.getContentPane().add(button7);
@@ -188,13 +189,13 @@ public class MenuManagerGUI {
 		mainWindow.getContentPane().add(selectedMenuList);
 		System.out.print(selectedMenuList.getName());
 
-		
+
 		mainWindow.setVisible(true);
 		// secWindow.setVisible(true);
 	}
 	private void buildSecWindow(){
 		//frame
-		secWindow = new JFrame();
+		secWindow = new JFrame("Menu:" + selectedMenuList.getSelectedValue());
 		secWindow.setBounds(20, 20, 1000, 450);
 		secWindow.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		secWindow.getContentPane().setLayout(null);
@@ -219,7 +220,7 @@ public class MenuManagerGUI {
 		label10.setBounds(20, 320, 150, 30);
 		secWindow.getContentPane().add(label10);
 
-		//text area for etails window 
+		//text area for details window 
 
 
 
