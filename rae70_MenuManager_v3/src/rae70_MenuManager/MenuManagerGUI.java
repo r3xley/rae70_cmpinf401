@@ -245,7 +245,7 @@ public class MenuManagerGUI {
 		secWindow.getContentPane().add(price);
 
 
-
+		//set the text areas to read only
 		text2.setEditable(false);
 		text3.setEditable(false);
 		text4.setEditable(false);
